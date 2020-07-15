@@ -1,15 +1,12 @@
 
 const api = require('./api')
-
 const ui = require('./ui')
 
 
 
 const getFormFields = require('../../../lib/get-form-fields')
-
 const onIndexBooks = function (event) {
   console.log(event)
-
   api.indexBooks()
     .then(ui.indexBooksSuccess)
     .catch(ui.indexBooksFailure)
@@ -23,7 +20,6 @@ const onShowBook = function (event) {
 
   const formData = getFormFields(form)
 
-
   console.log(formData)
 
   api.showBook(formData.book.id)
@@ -36,7 +32,6 @@ const onDestroyBook = function (event) {
   console.log('the form we submitted: ', event.target)
   const form = event.target
   const formData = getFormFields(form)
-
 
   console.log(formData)
 
@@ -53,7 +48,6 @@ const onUpdateBook = function (event) {
   const formData = getFormFields(form)
 
   console.log(formData)
-
 
   api.updateBook(formData)
     .then(ui.updateBookSuccess)

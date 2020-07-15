@@ -2,9 +2,7 @@
 
 const config = require('../config')
 
-
 const indexBooks = function () {
-
   return $.ajax({
     url: config.apiUrl + '/books'
   })
@@ -20,7 +18,6 @@ const showBook = function (id) {
 const destroyBook = function (id) {
   return $.ajax({
     url: config.apiUrl + '/books/' + id,
-
     method: 'DELETE'
   })
 }
@@ -48,7 +45,6 @@ const createBook = function (formData) {
         author: formData.book.author
       }
     }
-
   })
 }
 
