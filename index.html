@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <h1>Book Website</h1>
+
+      <p id="message"></p>
+      <button id="book-index">Get All The Books!</button>
+
+      <form id="book-show">
+        <input type="text" name="book[id]"/>
+        <button type="submit">Show Book</button>
+      </form>
+
+      <form id="destroy-book">
+        <input type="text" name="book[id]"/>
+        <button type="submit">Destroy Book</button>
+      </form>
+
+      <form id="book-update">
+        <input name="book[title]" type="text" placeholder="Book Title">
+        <input name="book[author]" type="text" placeholder="Book Author">
+        <input name="book[id]" type="text" placeholder="Book ID">
+        <button type="submit">Update Books</button>
+      </form>
+
+      <form id="book-create">
+        <input name="book[title]" type="text" placeholder="Book Title">
+        <input name="book[author]" type="text" placeholder="Book Author">
+        <button type="submit">Create Book</button>
+      </form>
+
+
+      <div id="content"></div>
+
+    </body>
+</html>
